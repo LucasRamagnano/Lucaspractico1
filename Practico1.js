@@ -98,3 +98,4 @@ function cancular18cuotas(cuotas) {
     cuotas = resultado / cuotasPrestamo;
     return porcentaje;
 }
+
