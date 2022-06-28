@@ -1,5 +1,6 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>Bienvenido a mi primer Practico
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,15 @@
     <title>Practico1</title>
 </head>
 <script src="./Practico1.js"></script>
+
 <body>
     <h4 id="login"></h4>
-    
-</body>
-
-</html>
-
-<from>
-    <input id="nombre" type="text" placeholder="ingresa nombre" class="form-control my-2"></input>
-    <input id= "edad" type="text" placeholder="ingresa edad" class="form-contro my-2"></input>
-    <button id= "boton" class="btn btn-success" type="reset" onclick="capturar();">agregar</button>
-    </from>
-     </div>
+    <form>
+        <input id="nombre" type="text" placeholder="ingresa nombre" class="form-control my-2"></input>
+        <input id="edad" type="text" placeholder="ingresa edad" class="form-contro my-2"></input>
+        <button id="boton" class="btn btn-success" type="reset" onclick="capturar();">agregar</button>
+    </form>
+    </div>
     <div class="container">
         <table class="table" id="tabla"></table>
         <thead class="thead-inverse">
@@ -30,32 +27,31 @@
     </tr>
     </thead>
     <tbody>
-        
+
     </tbody>
     </table>
     </div>
-    
+
     <script>
-        function capturar(){
-         function Persona(nombre, edad){
-            this.nombre=nombre;
-            this.edad=edad;
-         }     
-         var nombreCapturar = document.getElementById("nombre").value;
-         var edadCapturar = document.getElementById("edad").value;
-         nuevoSujeto= new Persona(nombreCapturar, edadCapturar);
-         console.log(nuevoSujeto);
-         agregar();
+        function capturar() {
+            function Persona(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
             }
-        var baseDatos= [];
-        function agregar(){
-    
+            let nombreCapturar = document.getElementById("nombre").value;
+            let edadCapturar = document.getElementById("edad").value;
+            nuevoSujeto = new Persona(nombreCapturar, edadCapturar);
+            console.log(nuevoSujeto);
+            agregar();
         }
-        var BaseDatos= [];
-        function agregar (){
+        
+        const baseDatos = [];
+        function agregar() {
             baseDatos.push(nuevoSujeto);
             console.log(baseDatos);
-            document.getElementById("tabla").innerHTML += '<tbody><td>' +nuevoSujeto.nombre+ '</td><td>' +nuevoSujeto.edad+'</td></tbody>' ;
+            document.getElementById("tabla").innerHTML += '<tbody><td>' + nuevoSujeto.nombre + '</td><td>' + nuevoSujeto.edad + '</td></tbody>';
         }
     </script>
-    
+</body>
+
+</html>
