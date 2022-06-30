@@ -113,7 +113,7 @@ function cancular18cuotas(cuotas) {
   return porcentaje;
 }
 
-const baseDatosPersonas = new Array();
+let baseDatosPersonas = new Array();
 
 class Persona {
   constructor(nombre, edad) {
