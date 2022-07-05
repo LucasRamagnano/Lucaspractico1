@@ -4,16 +4,16 @@ let edad = prompt("ingresa tu edad");
 let esMayor = false;
 
 if (edad <= 17) {
-  alert("no podes ingresar, sos menor");
+  swal("no podes ingresar, sos menor");
   esMayor = false;
 } else {
-  alert("Podes ingresar sos mayor");
-  alert(" bienvenido " + nombre + " " + apellido);
+  swal("Podes ingresar sos mayor");
+  swal(" bienvenido " + nombre + " " + apellido);
   esMayor = true;
 }
 
 if (esMayor == true) {
-  alert("pagina de cotizacion online");
+  swal("pagina de cotizacion online");
   let montoPrestamo = parseInt(
     prompt("Ingrese el valor a solicitar para su prestamo")
   );
@@ -29,7 +29,7 @@ if (esMayor == true) {
     );
     switch (cuotasPrestamo) {
       case 3:
-        alert(
+        swal(
           "Seleccionaste 3 cuotas y vas a tener un interes del: " +
             interes3cuotas +
             "%"
@@ -38,7 +38,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular3cuotasInteres());
         break;
       case 6:
-        alert(
+        swal(
           "Seleccionaste 6 cuotas y vas a tener un interes del: " +
             interes6cuotas +
             "%"
@@ -48,7 +48,7 @@ if (esMayor == true) {
         break;
 
       case 12:
-        alert(
+        swal(
           "Seleccionaste 12 cuotas y vas a tener un interes del: " +
             interes12cuotas +
             "%"
@@ -57,7 +57,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular12cuotasInteres());
         break;
       case 18:
-        alert(
+        swal(
           "Seleccionaste 18 cuotas y vas a tener un interes del: " +
             interes18cuotas +
             "%"
@@ -66,7 +66,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular18cuotasInteres());
         break;
       default:
-        alert("Valor no valido intente nuevamente");
+        swal("Valor no valido intente nuevamente");
         cuotasPrestamo = 0;
         break;
     }
