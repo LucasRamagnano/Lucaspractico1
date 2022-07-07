@@ -4,16 +4,16 @@ let edad = prompt("ingresa tu edad");
 let esMayor = false;
 
 if (edad <= 17) {
-  swal("no podes ingresar, sos menor");
+  alert("no podes ingresar, sos menor");
   esMayor = false;
 } else {
-  swal("Podes ingresar sos mayor");
-  swal(" bienvenido " + nombre + " " + apellido);
+  alert("Podes ingresar sos mayor");
+  alert(" bienvenido " + nombre + " " + apellido);
   esMayor = true;
 }
 
 if (esMayor == true) {
-  swal("pagina de cotizacion online");
+  alert("pagina de cotizacion online");
   let montoPrestamo = parseInt(
     prompt("Ingrese el valor a solicitar para su prestamo")
   );
@@ -29,7 +29,7 @@ if (esMayor == true) {
     );
     switch (cuotasPrestamo) {
       case 3:
-        swal(
+        alert(
           "Seleccionaste 3 cuotas y vas a tener un interes del: " +
             interes3cuotas +
             "%"
@@ -38,7 +38,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular3cuotasInteres());
         break;
       case 6:
-        swal(
+        alert(
           "Seleccionaste 6 cuotas y vas a tener un interes del: " +
             interes6cuotas +
             "%"
@@ -48,7 +48,7 @@ if (esMayor == true) {
         break;
 
       case 12:
-        swal(
+        alert(
           "Seleccionaste 12 cuotas y vas a tener un interes del: " +
             interes12cuotas +
             "%"
@@ -57,7 +57,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular12cuotasInteres());
         break;
       case 18:
-        swal(
+        alert(
           "Seleccionaste 18 cuotas y vas a tener un interes del: " +
             interes18cuotas +
             "%"
@@ -66,7 +66,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular18cuotasInteres());
         break;
       default:
-        swal("Valor no valido intente nuevamente");
+        alert("Valor no valido intente nuevamente");
         cuotasPrestamo = 0;
         break;
     }
@@ -139,4 +139,19 @@ function agregar(baseDatos, personaAgregar) {
     "</td><td>" +
     personaAgregar.edad +
     "</td></tbody>";
-}
+};
+const listaDeDatos =  document.querySelector('ul');
+
+const ld = document.createElement('ld');
+ld.textContent = 'cuotas';
+listaDeDatos.appendChild(ld);
+
+const datos = ['nombre', 'apellido', 'edad','cotizacion', 'cuotas'];
+
+
+  ld.forEach.add(item => {
+    const ld = document.createElement('ld');
+    ld.texContent = item;
+    listaDeDatos.appendChild(ld);
+  }); {
+} 
