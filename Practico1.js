@@ -4,11 +4,11 @@ let edad = prompt("ingresa tu edad");
 let esMayor = false;
 
 if (edad <= 17) {
-  alert("no podes ingresar, sos menor");
+  DOM("no podes ingresar, sos menor");
   esMayor = false;
 } else {
-  alert("Podes ingresar sos mayor");
-  alert(" bienvenido " + nombre + " " + apellido);
+  DOM("Podes ingresar sos mayor");
+  DOM(" bienvenido " + nombre + " " + apellido);
   esMayor = true;
 }
 
@@ -29,7 +29,7 @@ if (esMayor == true) {
     );
     switch (cuotasPrestamo) {
       case 3:
-        alert(
+        DOM(
           "Seleccionaste 3 cuotas y vas a tener un interes del: " +
             interes3cuotas +
             "%"
@@ -38,7 +38,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular3cuotasInteres());
         break;
       case 6:
-        alert(
+        DOM(
           "Seleccionaste 6 cuotas y vas a tener un interes del: " +
             interes6cuotas +
             "%"
@@ -48,7 +48,7 @@ if (esMayor == true) {
         break;
 
       case 12:
-        alert(
+        DOM(
           "Seleccionaste 12 cuotas y vas a tener un interes del: " +
             interes12cuotas +
             "%"
@@ -57,7 +57,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular12cuotasInteres());
         break;
       case 18:
-        alert(
+        DOM(
           "Seleccionaste 18 cuotas y vas a tener un interes del: " +
             interes18cuotas +
             "%"
@@ -66,7 +66,7 @@ if (esMayor == true) {
         console.log("Vas a pagar un interes de: " + calcular18cuotasInteres());
         break;
       default:
-        alert("Valor no valido intente nuevamente");
+        DOM("Valor no valido intente nuevamente");
         cuotasPrestamo = 0;
         break;
     }
@@ -155,3 +155,60 @@ const datos = ['nombre', 'apellido', 'edad','cotizacion', 'cuotas'];
     listaDeDatos.appendChild(ld);
   }); {
 } 
+function obtener_localstorage(){
+
+if (localStorage.getItem("nombre")){
+let usuario = localstorage.getItem("Lucas");
+let nombre = JSON.parse((usuario)) ;
+console.log(usuario);}
+else{
+  console.log("no hay entradas en el local Storage");
+
+}
+
+
+function local_storage() {
+  let persona = {
+    nombre: "Lucas",
+    edad: "26",
+    correo: "lucas.ramagnano@gmail.com",
+    coords: {
+      lat: 10,
+      lng: -10
+    }
+  }};
+
+let usuario = "Lucas"
+
+localStorage.setItem("Lucas", JSON.stringify("persona", usuario));
+local_storage.setItem("persona", JSON.stringify(persona) );
+}
+const escritorio = {
+  altura: "1 metro",
+  peso: "30 libras",
+  color: "marrón",
+  material: "madera",
+};
+const Juego = {
+  Genero: "Terror",
+  Tamaño: "27 G",
+  Jugablidad: "Multijugador,RPG"
+};
+
+const carritoDeCompras = {
+  1: "GTA",
+  2: "LoL",
+  3: "Age Of Ampire II",
+  4: "Isaac",
+  5: "Rocket League"
+};
+
+console.log(carritoDeCompras);
+
+const programador = {
+  primerNombre: "Lucas",
+  edad: 26,
+  dessarrolladorBackend: true,
+  lenguajes: ["JavaScript, C++"],
+  "Practico 1"
+};
