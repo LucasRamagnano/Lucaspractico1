@@ -209,6 +209,6 @@ const programador = {
   primerNombre: "Lucas",
   edad: 26,
   dessarrolladorBackend: true,
-  lenguajes: ["JavaScript, C++"],
-  "Practico 1"
+  lenguajes: ["JavaScript, C++"]
+  
 };
